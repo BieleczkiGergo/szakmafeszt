@@ -1,7 +1,6 @@
 
 class ScratchController {
-    constructor(url="10.42.0.1") {
-        this.url = url;
+    constructor() {
 
     }
 
@@ -13,7 +12,7 @@ class ScratchController {
                 {
                     "opcode" : "stop",
                     "blockType" : "command",
-                    "text" : "robot [url] stop",
+                    "text" : "robot stop [url]",
                     "arguments" : {
                         "url" : {
                             "type" : "string",
@@ -27,7 +26,7 @@ class ScratchController {
                 {
                     "opcode" : "forward",
                     "blockType" : "command",
-                    "text" : "robot [url] move forward",
+                    "text" : "robot move forward [url]",
                     "arguments" : {
                         "url" : {
                             "type" : "string",
@@ -41,7 +40,7 @@ class ScratchController {
                 {
                     "opcode" : "backward",
                     "blockType" : "command",
-                    "text" : "robot [url] move backward",
+                    "text" : "robot move backward [url]",
                     "arguments" : {
                         "url" : {
                             "type" : "string",
@@ -55,7 +54,7 @@ class ScratchController {
                 {
                     "opcode" : "left",
                     "blockType" : "command",
-                    "text" : "robot [url] turn left",
+                    "text" : "robot turn left [url]",
                     "arguments" : {
                         "url" : {
                             "type" : "string",
@@ -68,7 +67,7 @@ class ScratchController {
                 {
                     "opcode" : "right",
                     "blockType" : "command",
-                    "text" : "robot turn right",
+                    "text" : "robot turn right [url]",
                     "arguments" : {
                         "url" : {
                             "type" : "string",
@@ -86,27 +85,27 @@ class ScratchController {
     }
 
     stop({url}) {
-        fetch(url + "/s", {"method" : "post"});
+        fetch(url + "/s", {method : "post"});
 
     }
 
     forward({url}) {
-        fetch(url + "/fd", {"method" : "post"});
+        fetch(url + "/fd", {method : "post"});
         
     }
 
     backward({url}) {
-        fetch(url + "/bd", {"method" : "post"});
+        fetch(url + "/bd", {method : "post"});
 
     }
 
     left({url}) {
-        fetch(url + "/ld", {"method" : "post"});
+        fetch(url + "/ld", {method : "post"});
 
     }
 
     right({url}) {
-        fetch(url + "/rd", {"method" : "post"});
+        fetch(url + "/rd", {method : "post"});
 
     }
 
