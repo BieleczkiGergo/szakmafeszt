@@ -13,8 +13,13 @@ class ScratchController {
                 {
                     "opcode" : "stop",
                     "blockType" : "command",
-                    "text" : "robot stop",
+                    "text" : "robot [url] stop",
                     "arguments" : {
+                        "url" : {
+                            "type" : "string",
+                            "defaultvalue" : "localhost",
+
+                        },
     
                     },
     
@@ -22,8 +27,13 @@ class ScratchController {
                 {
                     "opcode" : "forward",
                     "blockType" : "command",
-                    "text" : "robot move forward",
+                    "text" : "robot [url] move forward",
                     "arguments" : {
+                        "url" : {
+                            "type" : "string",
+                            "defaultvalue" : "localhost",
+
+                        },
 
                     },
 
@@ -31,8 +41,13 @@ class ScratchController {
                 {
                     "opcode" : "backward",
                     "blockType" : "command",
-                    "text" : "robot move backward",
+                    "text" : "robot [url] move backward",
                     "arguments" : {
+                        "url" : {
+                            "type" : "string",
+                            "defaultvalue" : "localhost",
+
+                        },
 
                     },
 
@@ -40,8 +55,13 @@ class ScratchController {
                 {
                     "opcode" : "left",
                     "blockType" : "command",
-                    "text" : "robot turn left",
+                    "text" : "robot [url] turn left",
                     "arguments" : {
+                        "url" : {
+                            "type" : "string",
+                            "defaultvalue" : "localhost",
+
+                        },
 
                     },
                 },
@@ -50,20 +70,12 @@ class ScratchController {
                     "blockType" : "command",
                     "text" : "robot turn right",
                     "arguments" : {
-
-                    },
-
-                },
-                {
-                    "opcode" : "seturl",
-                    "blockType" : "command",
-                    "text" : "set robot url [url]",
-                    "arguments" : {
                         "url" : {
                             "type" : "string",
-                            "defaultvalue" : "10.42.0.1"
+                            "defaultvalue" : "localhost",
 
                         },
+
                     },
 
                 },
@@ -73,40 +85,28 @@ class ScratchController {
         }
     }
 
-    stop() {
-        fetch(this.url + "/s", {"method" : "post"});
+    stop({url}) {
+        fetch(url + "/s", {"method" : "post"});
 
     }
 
-    forward() {
-        fetch(this.url + "/fd", {"method" : "post"});
+    forward({url}) {
+        fetch(url + "/fd", {"method" : "post"});
         
     }
 
-    backward() {
-        fetch(this.url + "/bd", {"method" : "post"});
+    backward({url}) {
+        fetch(url + "/bd", {"method" : "post"});
 
     }
 
-    left() {
-        fetch(this.url + "/ld", {"method" : "post"});
+    left({url}) {
+        fetch(url + "/ld", {"method" : "post"});
 
     }
 
-    right() {
-        fetch(this.url + "/rd", {"method" : "post"});
-
-    }
-
-    seturl({url}){
-        fetch(url + "/s", {"method" : "post"})
-        .then((resp) => {
-            this.url = url;
-
-        }).catch((err) => {
-            alert("could't find the robot");
-
-        });
+    right({url}) {
+        fetch(url + "/rd", {"method" : "post"});
 
     }
 
