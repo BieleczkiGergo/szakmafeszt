@@ -25,13 +25,14 @@ class ScratchTest {
             ]
         }
     }
+
+    test({text}) {
+        console.log(`Alerting you!   ${text}`);
+    
+    }
 }
 
 
-function test({text}) {
-    console.log(`Alerting you!   ${text}`);
-
-}
 
 
 Scratch.extensions.register(new ScratchTest());
