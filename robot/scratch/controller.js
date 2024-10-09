@@ -112,4 +112,4 @@ class ScratchController {
 
 }
 
-ScratchController.extensions.register(new ScratchController());
+Scratch.extensions.register(new ScratchController());
