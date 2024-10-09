@@ -57,6 +57,8 @@ class RobotHTTPHandler(BaseHTTPRequestHandler):
             self.send_response(404)
         self.send_header("content-type", "text/plain")
         self.send_header("content-length", "0")
+        self.send_header("access-control-allow-origin", "*")
+        self.send_header("access-control-allow-methods", "POST, GET")
         self.end_headers()
         self.close_connection = True
 

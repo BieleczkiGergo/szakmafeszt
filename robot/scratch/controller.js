@@ -86,31 +86,38 @@ class ScratchController {
 
     stop({url}) {
         console.log(`attempting to fetch resource at http://${url}/s`);
-        fetch(`http://${url}/s`, {method : "post", mode: "cors"});
+        fetch(`${url}/s`, {method : "post", mode: "cors"})
+        .then((resp) => {
+            console.log(`status: ${resp.status}`);
+
+        }).catch((err) => {
+            console.error(err);
+
+        });
 
     }
 
     forward({url}) {
         console.log(`attempting to fetch resource at http://${url}/fd`);
-        fetch(`http://${url}/fd`, {method : "post", mode: "cors"});
+        fetch(`${url}/fd`, {method : "post", mode: "cors"});
         
     }
 
     backward({url}) {
         console.log(`attempting to fetch resource at http://${url}/bd`);
-        fetch(`http://${url}/bd`, {method : "post", mode: "cors"});
+        fetch(`${url}/bd`, {method : "post", mode: "cors"});
 
     }
 
     left({url}) {
         console.log(`attempting to fetch resource at http://${url}/ld`);
-        fetch(`http://${url}/ld`, {method : "post", mode: "cors"});
+        fetch(`${url}/ld`, {method : "post", mode: "cors"});
 
     }
 
     right({url}) {
         console.log(`attempting to fetch resource at http://${url}/rd`);
-        fetch(`http://${url}/rd`, {method : "post", mode: "cors"});
+        fetch(`${url}/rd`, {method : "post", mode: "cors"});
 
     }
 
