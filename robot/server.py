@@ -64,6 +64,7 @@ class RobotHTTPHandler(BaseHTTPRequestHandler):
 web_server = HTTPServer((HOSTNAME, PORT), RobotHTTPHandler)
 
 def start_server():
+    print(f"starting server on {HOSTNAME}:{PORT}")
     web_server.serve_forever()
 
 def stop_server():
