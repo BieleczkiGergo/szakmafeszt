@@ -1,8 +1,3 @@
-function test({text}) {
-    console.log(`Alerting you!   ${text}`);
-
-}
-
 class ScratchTest {
     constructor() {
 
@@ -31,5 +26,12 @@ class ScratchTest {
         }
     }
 }
+
+
+function test({text}) {
+    console.log(`Alerting you!   ${text}`);
+
+}
+
 
 Scratch.extensions.register(new ScratchTest());
