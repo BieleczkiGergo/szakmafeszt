@@ -85,27 +85,27 @@ class ScratchController {
     }
 
     stop({url}) {
-        fetch(url + "/s", {method : "post"});
+        fetch(`http://${url}/s`, {method : "post"});
 
     }
 
     forward({url}) {
-        fetch(url + "/fd", {method : "post"});
+        fetch(`http://${url}/fd`, {method : "post"});
         
     }
 
     backward({url}) {
-        fetch(url + "/bd", {method : "post"});
+        fetch(`http://${url}/bd`, {method : "post"});
 
     }
 
     left({url}) {
-        fetch(url + "/ld", {method : "post"});
+        fetch(`http://${url}/ld`, {method : "post"});
 
     }
 
     right({url}) {
-        fetch(url + "/rd", {method : "post"});
+        fetch(`http://${url}/rd`, {method : "post"});
 
     }
 

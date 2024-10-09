@@ -6,7 +6,7 @@ import controls
 
 HOSTNAME = "192.168.0.80"
 PORT = 3000
-valid_files = ("index.html", "style.css", "svgstyle.css", "script.js", "forward.svg", "backward.svg", "left.svg", "right.svg", "scratch_test.js", "scratch_controls.js")
+valid_files = ("index.html", "style.css", "svgstyle.css", "script.js", "forward.svg", "backward.svg", "left.svg", "right.svg")
 valid_actions = ("f", "b", "l", "r", "s")
 
 
