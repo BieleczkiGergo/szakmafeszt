@@ -1,6 +1,6 @@
 # Simple Scratch controlled robot
 
-This a code for a robot that can be controlled from scratch, in a LAN, through WIFI.
+Create a very simple robot that can be controlled from scratch, in a LAN, through WIFI.
 
 
 # Preparation
