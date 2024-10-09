@@ -32,7 +32,4 @@ class ScratchTest {
     }
 }
 
-
-
-
 Scratch.extensions.register(new ScratchTest());

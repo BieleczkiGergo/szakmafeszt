@@ -7,9 +7,18 @@ class ScratchController {
 
     getInfo(){
         return {
-            "id" : "robotController",
+            "id" : "SSBController",
             "name" : "SSB controller",
             "blocks" : [
+                {
+                    "opcode" : "stop",
+                    "blockType" : "command",
+                    "text" : "robot stop",
+                    "arguments" : {
+    
+                    },
+    
+                },
                 {
                     "opcode" : "forward",
                     "blockType" : "command",
@@ -46,16 +55,7 @@ class ScratchController {
 
                 },
                 {
-                    "opcode" : "stop",
-                    "blockType" : "command",
-                    "text" : "robot stop",
-                    "arguments" : {
-
-                    },
-
-                },
-                {
-                    "opcode" : "set_url",
+                    "opcode" : "seturl",
                     "blockType" : "command",
                     "text" : "set robot url [url]",
                     "arguments" : {
@@ -98,7 +98,7 @@ class ScratchController {
 
     }
 
-    set_url({url}){
+    seturl({url}){
         fetch(url + "/s", {"method" : "post"})
         .then((resp) => {
             this.url = url;
