@@ -1,3 +1,5 @@
+This tutorial is deprecated. A new one will be made soon.
+
 # Simple Scratch controlled robot
 
 Create a very simple robot that can be controlled from scratch, in a LAN, through WIFI.
