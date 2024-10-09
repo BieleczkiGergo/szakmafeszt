@@ -1,5 +1,5 @@
 function test({text}) {
-    alert(`Alerting you!   ${text}`);
+    console.log(`Alerting you!   ${text}`);
 
 }
 
