@@ -14,29 +14,44 @@ class ScratchController {
                     "opcode" : "forward",
                     "blockType" : "command",
                     "text" : "robot move forward",
+                    "arguments" : {
+
+                    },
 
                 },
                 {
                     "opcode" : "backward",
                     "blockType" : "command",
                     "text" : "robot move backward",
+                    "arguments" : {
+
+                    },
 
                 },
                 {
                     "opcode" : "left",
                     "blockType" : "command",
                     "text" : "robot turn left",
+                    "arguments" : {
+
+                    },
                 },
                 {
                     "opcode" : "right",
                     "blockType" : "command",
                     "text" : "robot turn right",
+                    "arguments" : {
+
+                    },
 
                 },
                 {
                     "opcode" : "stop",
                     "blockType" : "command",
                     "text" : "robot stop",
+                    "arguments" : {
+
+                    },
 
                 },
                 {
